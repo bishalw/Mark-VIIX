@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5846E60E247724D80037AA10 /* SubscriptionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E60D247724D80037AA10 /* SubscriptionCustomCell.swift */; };
+		5846E61124772CF40037AA10 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E61024772CF40037AA10 /* Subscription.swift */; };
 		586F128F246E0CB6004CDF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F128E246E0CB6004CDF3F /* AppDelegate.swift */; };
 		586F1291246E0CB6004CDF3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F1290246E0CB6004CDF3F /* SceneDelegate.swift */; };
-		586F1293246E0CB6004CDF3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F1292246E0CB6004CDF3F /* ViewController.swift */; };
 		586F1296246E0CB6004CDF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586F1294246E0CB6004CDF3F /* Main.storyboard */; };
 		586F1299246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 586F1297246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld */; };
 		586F129B246E0CBD004CDF3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586F129A246E0CBD004CDF3F /* Assets.xcassets */; };
 		586F129E246E0CBD004CDF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586F129C246E0CBD004CDF3F /* LaunchScreen.storyboard */; };
 		586F12A9246E0CBE004CDF3F /* MarkVIIXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F12A8246E0CBE004CDF3F /* MarkVIIXTests.swift */; };
 		586F12B4246E0CBE004CDF3F /* MarkVIIXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F12B3246E0CBE004CDF3F /* MarkVIIXUITests.swift */; };
+		586F12C42476172E004CDF3F /* MySubscriptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5846E60D247724D80037AA10 /* SubscriptionCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCustomCell.swift; sourceTree = "<group>"; };
+		5846E61024772CF40037AA10 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		586F128B246E0CB6004CDF3F /* MarkVIIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkVIIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586F128E246E0CB6004CDF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		586F1290246E0CB6004CDF3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		586F1292246E0CB6004CDF3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		586F1295246E0CB6004CDF3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		586F1298246E0CB6004CDF3F /* MarkVIIX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarkVIIX.xcdatamodel; sourceTree = "<group>"; };
 		586F129A246E0CBD004CDF3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		586F12AF246E0CBE004CDF3F /* MarkVIIXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkVIIXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		586F12B3246E0CBE004CDF3F /* MarkVIIXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVIIXUITests.swift; sourceTree = "<group>"; };
 		586F12B5246E0CBE004CDF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscriptionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5846E60F24772CCF0037AA10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5846E61024772CF40037AA10 /* Subscription.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		586F1282246E0CB6004CDF3F = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +113,16 @@
 		586F128D246E0CB6004CDF3F /* MarkVIIX */ = {
 			isa = PBXGroup;
 			children = (
+				5846E60F24772CCF0037AA10 /* Models */,
 				586F128E246E0CB6004CDF3F /* AppDelegate.swift */,
 				586F1290246E0CB6004CDF3F /* SceneDelegate.swift */,
-				586F1292246E0CB6004CDF3F /* ViewController.swift */,
+				586F12C22475D7C2004CDF3F /* View Controllers */,
 				586F1294246E0CB6004CDF3F /* Main.storyboard */,
 				586F129A246E0CBD004CDF3F /* Assets.xcassets */,
 				586F129C246E0CBD004CDF3F /* LaunchScreen.storyboard */,
 				586F129F246E0CBD004CDF3F /* Info.plist */,
 				586F1297246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld */,
+				5846E60D247724D80037AA10 /* SubscriptionCustomCell.swift */,
 			);
 			path = MarkVIIX;
 			sourceTree = "<group>";
@@ -129,6 +143,14 @@
 				586F12B5246E0CBE004CDF3F /* Info.plist */,
 			);
 			path = MarkVIIXUITests;
+			sourceTree = "<group>";
+		};
+		586F12C22475D7C2004CDF3F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5846E61124772CF40037AA10 /* Subscription.swift in Sources */,
+				5846E60E247724D80037AA10 /* SubscriptionCustomCell.swift in Sources */,
+				586F12C42476172E004CDF3F /* MySubscriptionsTableViewController.swift in Sources */,
 				586F1299246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld in Sources */,
-				586F1293246E0CB6004CDF3F /* ViewController.swift in Sources */,
 				586F128F246E0CB6004CDF3F /* AppDelegate.swift in Sources */,
 				586F1291246E0CB6004CDF3F /* SceneDelegate.swift in Sources */,
 			);
