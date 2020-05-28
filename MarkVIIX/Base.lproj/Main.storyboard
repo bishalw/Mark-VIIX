@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Bf-OT-oOY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Bf-OT-oOY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Subscriptions Table View Controller-->
+        <!--Subscriptions-->
         <scene sceneID="iKR-Na-EXK">
             <objects>
                 <tableViewController id="pg1-Mc-ben" customClass="MySubscriptionsTableViewController" customModule="MarkVIIX" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,26 +14,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="14S-uW-f57">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14S-uW-f57" id="Agw-sg-OYr">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="pg1-Mc-ben" id="ycf-NF-YkE"/>
                             <outlet property="delegate" destination="pg1-Mc-ben" id="fRi-wA-fpw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zk8-gA-vny"/>
+                    <navigationItem key="navigationItem" title="Subscriptions" id="zk8-gA-vny">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="lBS-RM-LnF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus.circle" catalog="system" id="t6F-Zr-gva"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcW-x1-b1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="116"/>
+            <point key="canvasLocation" x="845" y="167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pIU-kS-Vkq">
@@ -51,7 +44,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwl-Vt-X5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537.68115942028987" y="168.75"/>
+            <point key="canvasLocation" x="190" y="179"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

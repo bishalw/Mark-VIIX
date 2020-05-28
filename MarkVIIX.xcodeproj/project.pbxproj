@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5846E60E247724D80037AA10 /* SubscriptionCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E60D247724D80037AA10 /* SubscriptionCustomCell.swift */; };
 		5846E61124772CF40037AA10 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E61024772CF40037AA10 /* Subscription.swift */; };
+		5847A229247B02DA00C00CC3 /* SubscriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5847A228247B02DA00C00CC3 /* SubscriptionTableViewCell.xib */; };
+		5847A22B247B06FA00C00CC3 /* SubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847A22A247B06FA00C00CC3 /* SubscriptionTableViewCell.swift */; };
+		5847A22E247C62F300C00CC3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847A22D247C62F300C00CC3 /* Date+Extension.swift */; };
+		5847A230247C65C400C00CC3 /* Subscription+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847A22F247C65C400C00CC3 /* Subscription+Extension.swift */; };
 		586F128F246E0CB6004CDF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F128E246E0CB6004CDF3F /* AppDelegate.swift */; };
 		586F1291246E0CB6004CDF3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F1290246E0CB6004CDF3F /* SceneDelegate.swift */; };
 		586F1296246E0CB6004CDF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586F1294246E0CB6004CDF3F /* Main.storyboard */; };
@@ -38,8 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5846E60D247724D80037AA10 /* SubscriptionCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCustomCell.swift; sourceTree = "<group>"; };
 		5846E61024772CF40037AA10 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		5847A228247B02DA00C00CC3 /* SubscriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionTableViewCell.xib; sourceTree = "<group>"; };
+		5847A22A247B06FA00C00CC3 /* SubscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewCell.swift; sourceTree = "<group>"; };
+		5847A22D247C62F300C00CC3 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		5847A22F247C65C400C00CC3 /* Subscription+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subscription+Extension.swift"; sourceTree = "<group>"; };
 		586F128B246E0CB6004CDF3F /* MarkVIIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkVIIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586F128E246E0CB6004CDF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		586F1290246E0CB6004CDF3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5847A226247B02A700C00CC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5847A227247B02B600C00CC3 /* SubscriptionTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5847A227247B02B600C00CC3 /* SubscriptionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5847A228247B02DA00C00CC3 /* SubscriptionTableViewCell.xib */,
+				5847A22A247B06FA00C00CC3 /* SubscriptionTableViewCell.swift */,
+			);
+			path = SubscriptionTableViewCell;
+			sourceTree = "<group>";
+		};
+		5847A22C247C62CA00C00CC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5847A22D247C62F300C00CC3 /* Date+Extension.swift */,
+				5847A22F247C65C400C00CC3 /* Subscription+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		586F1282246E0CB6004CDF3F = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +145,8 @@
 		586F128D246E0CB6004CDF3F /* MarkVIIX */ = {
 			isa = PBXGroup;
 			children = (
+				5847A22C247C62CA00C00CC3 /* Extensions */,
+				5847A226247B02A700C00CC3 /* Views */,
 				5846E60F24772CCF0037AA10 /* Models */,
 				586F128E246E0CB6004CDF3F /* AppDelegate.swift */,
 				586F1290246E0CB6004CDF3F /* SceneDelegate.swift */,
@@ -122,7 +156,6 @@
 				586F129C246E0CBD004CDF3F /* LaunchScreen.storyboard */,
 				586F129F246E0CBD004CDF3F /* Info.plist */,
 				586F1297246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld */,
-				5846E60D247724D80037AA10 /* SubscriptionCustomCell.swift */,
 			);
 			path = MarkVIIX;
 			sourceTree = "<group>";
@@ -259,6 +292,7 @@
 			files = (
 				586F129E246E0CBD004CDF3F /* LaunchScreen.storyboard in Resources */,
 				586F129B246E0CBD004CDF3F /* Assets.xcassets in Resources */,
+				5847A229247B02DA00C00CC3 /* SubscriptionTableViewCell.xib in Resources */,
 				586F1296246E0CB6004CDF3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,9 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5846E61124772CF40037AA10 /* Subscription.swift in Sources */,
-				5846E60E247724D80037AA10 /* SubscriptionCustomCell.swift in Sources */,
 				586F12C42476172E004CDF3F /* MySubscriptionsTableViewController.swift in Sources */,
+				5847A22B247B06FA00C00CC3 /* SubscriptionTableViewCell.swift in Sources */,
 				586F1299246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld in Sources */,
+				5847A230247C65C400C00CC3 /* Subscription+Extension.swift in Sources */,
+				5847A22E247C62F300C00CC3 /* Date+Extension.swift in Sources */,
 				586F128F246E0CB6004CDF3F /* AppDelegate.swift in Sources */,
 				586F1291246E0CB6004CDF3F /* SceneDelegate.swift in Sources */,
 			);

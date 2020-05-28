@@ -9,37 +9,43 @@
 import Foundation
 import UIKit
 
-struct CellData{
-    
-    let subscriptionLogo : UIImage?
-    let subscriptionName : String?
-    let subscriptionCost : Int?
-    
-}
 
 class MySubscriptionsTableViewController: UITableViewController{
     
-    var data = [CellData]()
-    
+    private var models: [Subscription] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: SubscriptionTableViewCell.nibName, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: SubscriptionTableViewCell.reuseId)
         
-        data = [CellData.init(subscriptionLogo: UIImage?, subscriptionName: "dropbox", subscriptionCost: 20)]
+        for _ in 0...20 {
+            models.append(Subscription.makeFake())
+        }
+      
     }
-    
-    
-    let models = ["apple","orange","mango","watermelon","cherry","grapes","strawberry","mandarin", "guava","papaya","a","b","c","d","e","f","g","h","i","j","k","l","m","n"]
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 1;
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
+    
+    // creates new cell and returns cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell();
-        cell.textLabel?.text = models[indexPath.row]
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: SubscriptionTableViewCell.reuseId, for: indexPath)  as? SubscriptionTableViewCell {
+            //TODO:- Configure eg. cell.configure(subscription: models[indexPath.row])
+            let model = models[indexPath.row]
+            cell.configure(subscription: model)
+            
+            return cell
+        } else {
+            print("Subscriptionviewcell not found")
+            return UITableViewCell()
+        }
     }
 }
+
+

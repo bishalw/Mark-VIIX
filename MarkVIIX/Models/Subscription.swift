@@ -9,15 +9,13 @@
 import Foundation
 
 struct Subscription {
-    
-    var name: String?;
-    var description: String?;
-    var cost: Double;
-    var iconName: String;
-    var firstBill: TimeInterval;
-    var cycle: Double;
-    var durtaion: Double;
-    var remindMe: Double;
-    var currency: Double;
-    
+    var name: String
+    var description: String?
+    var cost: Double?
+    var iconName: String
+    var firstBill: TimeInterval?
+    var cycle: TimeInterval?
+    var duration: TimeInterval?
+    var remindMe: TimeInterval?
+    var currency: TimeInterval?
 }
