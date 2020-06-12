@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581C3BB1248C7AB90053C07F /* TextInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C3BB0248C7AB90053C07F /* TextInputTableViewCell.swift */; };
+		581C3BB4248C7B090053C07F /* TextInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C3BB3248C7B090053C07F /* TextInputTableViewCell.xib */; };
 		5846E61124772CF40037AA10 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E61024772CF40037AA10 /* Subscription.swift */; };
 		5847A229247B02DA00C00CC3 /* SubscriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5847A228247B02DA00C00CC3 /* SubscriptionTableViewCell.xib */; };
 		5847A22B247B06FA00C00CC3 /* SubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847A22A247B06FA00C00CC3 /* SubscriptionTableViewCell.swift */; };
 		5847A22E247C62F300C00CC3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847A22D247C62F300C00CC3 /* Date+Extension.swift */; };
 		5847A230247C65C400C00CC3 /* Subscription+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5847A22F247C65C400C00CC3 /* Subscription+Extension.swift */; };
+		584E637B2480A14300203C6A /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E637A2480A14300203C6A /* SubscriptionViewController.swift */; };
+		584E637D2480A77500203C6A /* InstantiableFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E637C2480A77500203C6A /* InstantiableFromStoryboard.swift */; };
+		58515C7D24832D10008C7847 /* AddSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58515C7C24832D10008C7847 /* AddSubscriptionViewController.swift */; };
+		58515C7F24833542008C7847 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58515C7E24833542008C7847 /* SettingsViewController.swift */; };
+		5854571C2488AB9B00D179FA /* SubcriptionEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5854571B2488AB9B00D179FA /* SubcriptionEditTableViewController.swift */; };
+		58611F162488AFB800F073C8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58611F152488AFB800F073C8 /* UIViewController+Extension.swift */; };
 		586F128F246E0CB6004CDF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F128E246E0CB6004CDF3F /* AppDelegate.swift */; };
 		586F1291246E0CB6004CDF3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F1290246E0CB6004CDF3F /* SceneDelegate.swift */; };
 		586F1296246E0CB6004CDF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586F1294246E0CB6004CDF3F /* Main.storyboard */; };
@@ -41,11 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		581C3BB0248C7AB90053C07F /* TextInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputTableViewCell.swift; sourceTree = "<group>"; };
+		581C3BB3248C7B090053C07F /* TextInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputTableViewCell.xib; sourceTree = "<group>"; };
 		5846E61024772CF40037AA10 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
 		5847A228247B02DA00C00CC3 /* SubscriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionTableViewCell.xib; sourceTree = "<group>"; };
 		5847A22A247B06FA00C00CC3 /* SubscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewCell.swift; sourceTree = "<group>"; };
 		5847A22D247C62F300C00CC3 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		5847A22F247C65C400C00CC3 /* Subscription+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subscription+Extension.swift"; sourceTree = "<group>"; };
+		584E637A2480A14300203C6A /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
+		584E637C2480A77500203C6A /* InstantiableFromStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiableFromStoryboard.swift; sourceTree = "<group>"; };
+		58515C7C24832D10008C7847 /* AddSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscriptionViewController.swift; sourceTree = "<group>"; };
+		58515C7E24833542008C7847 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5854571B2488AB9B00D179FA /* SubcriptionEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcriptionEditTableViewController.swift; sourceTree = "<group>"; };
+		58611F152488AFB800F073C8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		586F128B246E0CB6004CDF3F /* MarkVIIX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkVIIX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586F128E246E0CB6004CDF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		586F1290246E0CB6004CDF3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		581C3BAE248C7A4E0053C07F /* Subscription Edit */ = {
+			isa = PBXGroup;
+			children = (
+				5854571B2488AB9B00D179FA /* SubcriptionEditTableViewController.swift */,
+			);
+			path = "Subscription Edit";
+			sourceTree = "<group>";
+		};
+		581C3BB2248C7ABD0053C07F /* TextInputTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				581C3BB0248C7AB90053C07F /* TextInputTableViewCell.swift */,
+				581C3BB3248C7B090053C07F /* TextInputTableViewCell.xib */,
+			);
+			path = TextInputTableViewCell;
+			sourceTree = "<group>";
+		};
 		5846E60F24772CCF0037AA10 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +132,7 @@
 		5847A226247B02A700C00CC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				581C3BB2248C7ABD0053C07F /* TextInputTableViewCell */,
 				5847A227247B02B600C00CC3 /* SubscriptionTableViewCell */,
 			);
 			path = Views;
@@ -118,6 +152,7 @@
 			children = (
 				5847A22D247C62F300C00CC3 /* Date+Extension.swift */,
 				5847A22F247C65C400C00CC3 /* Subscription+Extension.swift */,
+				58611F152488AFB800F073C8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +188,7 @@
 				586F12C22475D7C2004CDF3F /* View Controllers */,
 				586F1294246E0CB6004CDF3F /* Main.storyboard */,
 				586F129A246E0CBD004CDF3F /* Assets.xcassets */,
+				584E637C2480A77500203C6A /* InstantiableFromStoryboard.swift */,
 				586F129C246E0CBD004CDF3F /* LaunchScreen.storyboard */,
 				586F129F246E0CBD004CDF3F /* Info.plist */,
 				586F1297246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld */,
@@ -181,7 +217,11 @@
 		586F12C22475D7C2004CDF3F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				581C3BAE248C7A4E0053C07F /* Subscription Edit */,
 				586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */,
+				584E637A2480A14300203C6A /* SubscriptionViewController.swift */,
+				58515C7C24832D10008C7847 /* AddSubscriptionViewController.swift */,
+				58515C7E24833542008C7847 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -291,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				586F129E246E0CBD004CDF3F /* LaunchScreen.storyboard in Resources */,
+				581C3BB4248C7B090053C07F /* TextInputTableViewCell.xib in Resources */,
 				586F129B246E0CBD004CDF3F /* Assets.xcassets in Resources */,
 				5847A229247B02DA00C00CC3 /* SubscriptionTableViewCell.xib in Resources */,
 				586F1296246E0CB6004CDF3F /* Main.storyboard in Resources */,
@@ -318,14 +359,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584E637B2480A14300203C6A /* SubscriptionViewController.swift in Sources */,
 				5846E61124772CF40037AA10 /* Subscription.swift in Sources */,
 				586F12C42476172E004CDF3F /* MySubscriptionsTableViewController.swift in Sources */,
 				5847A22B247B06FA00C00CC3 /* SubscriptionTableViewCell.swift in Sources */,
+				58515C7D24832D10008C7847 /* AddSubscriptionViewController.swift in Sources */,
+				5854571C2488AB9B00D179FA /* SubcriptionEditTableViewController.swift in Sources */,
+				584E637D2480A77500203C6A /* InstantiableFromStoryboard.swift in Sources */,
 				586F1299246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld in Sources */,
+				581C3BB1248C7AB90053C07F /* TextInputTableViewCell.swift in Sources */,
 				5847A230247C65C400C00CC3 /* Subscription+Extension.swift in Sources */,
 				5847A22E247C62F300C00CC3 /* Date+Extension.swift in Sources */,
+				58611F162488AFB800F073C8 /* UIViewController+Extension.swift in Sources */,
 				586F128F246E0CB6004CDF3F /* AppDelegate.swift in Sources */,
 				586F1291246E0CB6004CDF3F /* SceneDelegate.swift in Sources */,
+				58515C7F24833542008C7847 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

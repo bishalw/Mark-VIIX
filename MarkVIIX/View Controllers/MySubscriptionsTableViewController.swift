@@ -11,14 +11,31 @@ import UIKit
 
 
 class MySubscriptionsTableViewController: UITableViewController{
+    @IBOutlet var addSubscriptionsButton: UIBarButtonItem!
     
+    @IBOutlet var settingsButton: UIBarButtonItem!
+
     private var models: [Subscription] = []
+    
+    
+    @IBAction func addSubscriptionsButtonPressed(_ sender: UIBarButtonItem) {
+        print("buttonpressed")
+             let addSubscriptionViewController = AddSubscriptionViewController.instantiateFromStoryBoard()
+             let navigationController = UINavigationController(rootViewController: addSubscriptionViewController)
+    
+             navigationController.modalPresentationStyle = UIModalPresentationStyle.popover
+             self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func settingsButtonPressed(){
+        let settingsViewController = SettingsViewController.instantiateFromStoryBoard()
+        settingsViewController.modalPresentationStyle = UIModalPresentationStyle.popover
+        self.present(settingsViewController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: SubscriptionTableViewCell.nibName, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: SubscriptionTableViewCell.reuseId)
-        
+        SubscriptionTableViewCell.registerIn(tableView: tableView)
         for _ in 0...20 {
             models.append(Subscription.makeFake())
         }
@@ -46,6 +63,13 @@ class MySubscriptionsTableViewController: UITableViewController{
             return UITableViewCell()
         }
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let subscriptionViewController = SubscriptionEditTableViewController.instantiateFromStoryBoard()
+        let navigationController = UINavigationController(rootViewController: subscriptionViewController)
+        navigationController.modalPresentationStyle = UIModalPresentationStyle.popover
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
 }
-
 

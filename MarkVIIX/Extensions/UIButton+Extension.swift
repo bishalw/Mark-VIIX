@@ -7,9 +7,8 @@
 //
 
 import Foundation
-
 extension UIButton {
-    class func addBarButton(tittle:String,_ target: Any, action: Selector) -> UIBarButtonItem{
+    func addBarButton(tittle:String,_ target: Any, action: Selector) -> UIBarButtonItem{
         let button = UIButton(type: .system)
         button.setTitle(tittle, for: .normal)
         button.addTarget(target, action: action, for: .touchUpInside)
