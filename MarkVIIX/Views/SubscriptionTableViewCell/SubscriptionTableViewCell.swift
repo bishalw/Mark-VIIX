@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SubscriptionTableViewCell: UITableViewCell {
+class SubscriptionTableViewCell: UITableViewCell, XibLoadable {
     //MARK:- Static Variables
     static var nibName: String = "SubscriptionTableViewCell"
     static var reuseId: String = "SubscriptionTableViewCell"

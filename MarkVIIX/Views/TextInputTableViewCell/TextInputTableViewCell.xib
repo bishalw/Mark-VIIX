@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextInputTableViewCell" rowHeight="114" id="tSd-Ea-fzs" customClass="TextInputTableViewCell" customModule="MarkVIIX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tSd-Ea-fzs" id="q6M-57-xXZ">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAI-JM-LjF">
+                        <rect key="frame" x="20" y="46.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Text" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-iK-KCh">
+                        <rect key="frame" x="356" y="49" width="57" height="16"/>
+                        <nil key="textColor"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="N8f-iK-KCh" secondAttribute="trailing" constant="20" id="4mE-T1-5aV"/>
+                    <constraint firstItem="N8f-iK-KCh" firstAttribute="centerY" secondItem="q6M-57-xXZ" secondAttribute="centerY" id="EIy-QX-ZsL"/>
+                    <constraint firstItem="yAI-JM-LjF" firstAttribute="centerY" secondItem="q6M-57-xXZ" secondAttribute="centerY" id="gT3-cd-h3Y"/>
+                    <constraint firstItem="yAI-JM-LjF" firstAttribute="leading" secondItem="q6M-57-xXZ" secondAttribute="leading" constant="20" id="ivU-xy-QqJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textField" destination="N8f-iK-KCh" id="qP9-MS-lEj"/>
+                <outlet property="titleLabel" destination="yAI-JM-LjF" id="BZT-Uv-FcX"/>
+            </connections>
+            <point key="canvasLocation" x="135.50724637681159" y="18.080357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
