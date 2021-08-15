@@ -30,6 +30,7 @@ class SubscriptionEditTableViewController: UITableViewController {
         self.title = "Subscription"
         super.viewDidLoad()
         TextInputTableViewCell.registerIn(tableView: self.tableView)
+        DatePickerTableViewCell.registerIn(tableView: self.tableView)
         self.navigationItem.leftBarButtonItem = dismissBarButton
         self.navigationItem.rightBarButtonItem = saveBarButton
     }
@@ -45,7 +46,6 @@ class SubscriptionEditTableViewController: UITableViewController {
     @objc func saveBarButtonPressed(_ barbutton: UIBarButtonItem){
         //TODO:- Save Logic
     }
-
     
     struct Cell {
         var title: String?
@@ -66,8 +66,11 @@ class SubscriptionEditTableViewController: UITableViewController {
     }
     
     var state: State = State(cells: [
-        Cell(title: "Name", placeHolder: "Enter Name", type: .textEdit(value: "")),
-        Cell(title: "Description", placeHolder: "Enter A Description", type: .textEdit(value: "This was the description"))])
+                                Cell(title: "Name", placeHolder: "Enter Name", type: .textEdit(value: "")),
+                                Cell(title: "Description", placeHolder: "Enter A Description", type: .textEdit(value: "This was the description")),
+                                Cell(title: "Date", type: .pickDate(value: nil)),
+                                Cell(title: "Name", placeHolder: "Enter Name", type: .textEdit(value: ""))])
+        
 }
 
 extension SubscriptionEditTableViewController {
@@ -91,8 +94,13 @@ extension SubscriptionEditTableViewController {
             tableViewCell.placeHolder = cell.placeHolder
             return tableViewCell
         case .pickDate(let value):
+            let tableViewCell = tableView.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.reuseId, for: indexPath) as! DatePickerTableViewCell
+            if (indexPath.row == 2) {
+                DatePickerTableViewCell.animate(withDuration: 0, delay: 0, options: <#T##UIView.AnimationOptions#>, animations: nil) { <#Bool#> in
+                    
+                }
+            return tableViewCell
             
-            break
         case .pickCycle(let value):
             break
         case .pickDuration(let value):
@@ -100,6 +108,7 @@ extension SubscriptionEditTableViewController {
         }
         return UITableViewCell()
     }
+    
 }
 
 
