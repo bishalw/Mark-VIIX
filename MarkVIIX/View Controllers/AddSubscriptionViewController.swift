@@ -13,13 +13,6 @@ import UIKit
 
 
 class AddSubscriptionViewController: UIViewController{
-    private lazy var searchBarButton: UIBarButtonItem = {
-        let navButton = UIBarButtonItem(title: "Add",
-                                          style: UIBarButtonItem.Style.plain,
-                                          target: self,
-                                          action: #selector(searchBarButtonPressed(_:)))
-        return navButton
-    }()
     
     private lazy var dismissBarButton: UIBarButtonItem = {
         let navButton = UIBarButtonItem(title: "Cancel",
@@ -28,17 +21,30 @@ class AddSubscriptionViewController: UIViewController{
                                           action: #selector(dismissBarButtonPressed(_:)))
         return navButton
     }()
+    private lazy var addBarButton: UIBarButtonItem = {
+        let navButton = UIBarButtonItem(title: "Add",
+                                          style: UIBarButtonItem.Style.plain,
+                                          target: self,
+                                          action: #selector(addBarButtonPressed(_:)))
+        return navButton
+    }()
     
+    
+
+    private var subscriptionViewController = SubscriptionViewController.instantiateFromStoryBoard()
     override func viewDidLoad() {
+        self.title = "New Subscription"
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = dismissBarButton
-        self.navigationItem.rightBarButtonItem = searchBarButton
+        self.navigationItem.rightBarButtonItem = addBarButton
+        UIViewController.embed(subscriptionViewController, inParent: self, inView: self.view)
     }
     
     @objc func dismissBarButtonPressed(_ barbutton: UIBarButtonItem){
+        self.dismiss(animated: true, completion: nil)
         
     }
-    @objc func searchBarButtonPressed(_ barbutton: UIBarButtonItem){
+    @objc func addBarButtonPressed(_ barbutton: UIBarButtonItem){
           
     }
 }

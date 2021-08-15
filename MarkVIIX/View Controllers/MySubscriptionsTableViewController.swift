@@ -35,6 +35,7 @@ class MySubscriptionsTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // registerIN do?
         SubscriptionTableViewCell.registerIn(tableView: tableView)
         for _ in 0...20 {
             models.append(Subscription.makeFake())

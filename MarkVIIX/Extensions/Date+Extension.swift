@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//why date is extension
 extension Date {
   func asString(style: DateFormatter.Style) -> String {
     let dateFormatter = DateFormatter()

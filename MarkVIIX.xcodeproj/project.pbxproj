@@ -29,6 +29,8 @@
 		586F12A9246E0CBE004CDF3F /* MarkVIIXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F12A8246E0CBE004CDF3F /* MarkVIIXTests.swift */; };
 		586F12B4246E0CBE004CDF3F /* MarkVIIXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F12B3246E0CBE004CDF3F /* MarkVIIXUITests.swift */; };
 		586F12C42476172E004CDF3F /* MySubscriptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */; };
+		588CC94B26C8578C00AAB63D /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588CC94926C8578C00AAB63D /* DatePickerTableViewCell.swift */; };
+		588CC94C26C8578C00AAB63D /* DatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 588CC94A26C8578C00AAB63D /* DatePickerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		586F12B3246E0CBE004CDF3F /* MarkVIIXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkVIIXUITests.swift; sourceTree = "<group>"; };
 		586F12B5246E0CBE004CDF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscriptionsTableViewController.swift; sourceTree = "<group>"; };
+		588CC94926C8578C00AAB63D /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		588CC94A26C8578C00AAB63D /* DatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		5847A226247B02A700C00CC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				588CC94526C8536A00AAB63D /* DatePickerTableViewCell */,
 				581C3BB2248C7ABD0053C07F /* TextInputTableViewCell */,
 				5847A227247B02B600C00CC3 /* SubscriptionTableViewCell */,
 			);
@@ -219,11 +224,28 @@
 			children = (
 				581C3BAE248C7A4E0053C07F /* Subscription Edit */,
 				586F12C32476172E004CDF3F /* MySubscriptionsTableViewController.swift */,
+				58E813AB26C22224000DE1C7 /* New Subscription */,
 				584E637A2480A14300203C6A /* SubscriptionViewController.swift */,
 				58515C7C24832D10008C7847 /* AddSubscriptionViewController.swift */,
 				58515C7E24833542008C7847 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		588CC94526C8536A00AAB63D /* DatePickerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				588CC94926C8578C00AAB63D /* DatePickerTableViewCell.swift */,
+				588CC94A26C8578C00AAB63D /* DatePickerTableViewCell.xib */,
+			);
+			path = DatePickerTableViewCell;
+			sourceTree = "<group>";
+		};
+		58E813AB26C22224000DE1C7 /* New Subscription */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Subscription";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				586F129E246E0CBD004CDF3F /* LaunchScreen.storyboard in Resources */,
+				588CC94C26C8578C00AAB63D /* DatePickerTableViewCell.xib in Resources */,
 				581C3BB4248C7B090053C07F /* TextInputTableViewCell.xib in Resources */,
 				586F129B246E0CBD004CDF3F /* Assets.xcassets in Resources */,
 				5847A229247B02DA00C00CC3 /* SubscriptionTableViewCell.xib in Resources */,
@@ -366,6 +389,7 @@
 				58515C7D24832D10008C7847 /* AddSubscriptionViewController.swift in Sources */,
 				5854571C2488AB9B00D179FA /* SubcriptionEditTableViewController.swift in Sources */,
 				584E637D2480A77500203C6A /* InstantiableFromStoryboard.swift in Sources */,
+				588CC94B26C8578C00AAB63D /* DatePickerTableViewCell.swift in Sources */,
 				586F1299246E0CB6004CDF3F /* MarkVIIX.xcdatamodeld in Sources */,
 				581C3BB1248C7AB90053C07F /* TextInputTableViewCell.swift in Sources */,
 				5847A230247C65C400C00CC3 /* Subscription+Extension.swift in Sources */,

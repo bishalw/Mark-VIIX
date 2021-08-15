@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// what is the subscription for?
+
 // MARK:- Computed variables
 extension Subscription {
     var icon: UIImage? {
@@ -60,7 +62,7 @@ extension Subscription {
 
     
 }
-
+//why make fake  is an extension?
 extension Subscription {
     static func makeFake() -> Subscription {
         return Subscription(name: "Netflix",
