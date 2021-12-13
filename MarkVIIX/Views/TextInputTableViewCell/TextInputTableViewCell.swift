@@ -14,10 +14,23 @@ class TextInputTableViewCell: UITableViewCell, XibLoadable {
     static var reuseId: String = "TextInputTableViewCell"
     
     @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var textField: UITextField!
+    @IBOutlet private var textField: UITextField! {
+        didSet {
+            self.textField.addTarget(self, action: #selector(textFieldValueChanged), for: .editingChanged)
+        }
+    }
+    
+    var answerChanged: ((SubscriptionEditTableViewController.Cell, String?)->Void)?
     
     private var _title: String?
     private var _answer: String?
+    var cell: SubscriptionEditTableViewController.Cell?
+    
+    @objc func textFieldValueChanged() {
+        guard let cell = cell else { return }
+        answerChanged?(cell, answer)
+    }
+    
 }
 
 extension TextInputTableViewCell {

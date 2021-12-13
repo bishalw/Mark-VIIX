@@ -37,7 +37,7 @@ class AddSubscriptionViewController: UIViewController{
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = dismissBarButton
         self.navigationItem.rightBarButtonItem = addBarButton
-        UIViewController.embed(subscriptionViewController, inParent: self, inView: self.view)
+        //UIViewController.embed(subscriptionViewController, inParent: self, inView: self.view)
     }
     
     @objc func dismissBarButtonPressed(_ barbutton: UIBarButtonItem){

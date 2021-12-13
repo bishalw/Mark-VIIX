@@ -15,17 +15,26 @@ class MySubscriptionsTableViewController: UITableViewController{
     
     @IBOutlet var settingsButton: UIBarButtonItem!
 
-    private var models: [Subscription] = []
+    private var models: [Subscription] = [] {
+        didSet {
+            guard isViewLoaded else { return }
+            tableView.reloadData()
+        }
+    }
     
     
     @IBAction func addSubscriptionsButtonPressed(_ sender: UIBarButtonItem) {
         print("buttonpressed")
-             let addSubscriptionViewController = AddSubscriptionViewController.instantiateFromStoryBoard()
-             let navigationController = UINavigationController(rootViewController: addSubscriptionViewController)
+             let listSubscriptionViewController = ListSubscriptionViewController.instantiateFromStoryBoard()
+//           let addSubscriptionViewController = AddSubscriptionViewController.instantiateFromStoryBoard()
+             listSubscriptionViewController.didDismiss = {
+                self.models = SubscriptionDataStore.shared.usersSubscriptionList
+             }
+             let navigationController = UINavigationController(rootViewController: listSubscriptionViewController)
     
              navigationController.modalPresentationStyle = UIModalPresentationStyle.popover
              self.present(navigationController, animated: true, completion: nil)
-    }
+    } 
     
     @IBAction func settingsButtonPressed(){
         let settingsViewController = SettingsViewController.instantiateFromStoryBoard()
@@ -37,10 +46,12 @@ class MySubscriptionsTableViewController: UITableViewController{
         super.viewDidLoad()
         // registerIN do?
         SubscriptionTableViewCell.registerIn(tableView: tableView)
-        for _ in 0...20 {
-            models.append(Subscription.makeFake())
-        }
-      
+        models = SubscriptionDataStore.shared.usersSubscriptionList
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        models = SubscriptionDataStore.shared.usersSubscriptionList
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

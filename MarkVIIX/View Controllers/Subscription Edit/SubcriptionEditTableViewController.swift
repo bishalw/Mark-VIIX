@@ -1,4 +1,3 @@
-//
 //  SubscriptionEditTableViewController.swift
 //  MarkVIIX
 //
@@ -33,10 +32,7 @@ class SubscriptionEditTableViewController: UITableViewController {
         DatePickerTableViewCell.registerIn(tableView: self.tableView)
         self.navigationItem.leftBarButtonItem = dismissBarButton
         self.navigationItem.rightBarButtonItem = saveBarButton
-    }
-    
-    func configure(subscription: Subscription) {
-        //TODO:- Create State Using subscription
+        setStateFromSubscription(subscription: nil)
     }
         
     @objc func dismissBarButtonPressed(_ barbutton: UIBarButtonItem){
@@ -51,6 +47,7 @@ class SubscriptionEditTableViewController: UITableViewController {
         var title: String?
         var placeHolder: String?
         var type: CellType
+        var variable: Variable
         
         enum CellType {
             case textDisplay(value: String?)
@@ -59,17 +56,21 @@ class SubscriptionEditTableViewController: UITableViewController {
             case pickCycle(value: Int?)
             case pickDuration(value: Int?)
         }
+        
+        enum Variable {
+            case name
+            case description
+            case firstBillDate
+        }
     }
     
     struct State {
         var cells: [Cell]
-    }
+   }
     
-    var state: State = State(cells: [
-                                Cell(title: "Name", placeHolder: "Enter Name", type: .textEdit(value: "")),
-                                Cell(title: "Description", placeHolder: "Enter A Description", type: .textEdit(value: "This was the description")),
-                                Cell(title: "Date", type: .pickDate(value: nil)),
-                                Cell(title: "Name", placeHolder: "Enter Name", type: .textEdit(value: ""))])
+    var dateIsEditing = false
+    
+    var state: State = State(cells: [])
         
 }
 
@@ -92,15 +93,12 @@ extension SubscriptionEditTableViewController {
             tableViewCell.title = cell.title
             tableViewCell.answer = value
             tableViewCell.placeHolder = cell.placeHolder
+            tableViewCell.cell = cell
+            tableViewCell.answerChanged = self.textViewAnswerChanged
             return tableViewCell
         case .pickDate(let value):
             let tableViewCell = tableView.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.reuseId, for: indexPath) as! DatePickerTableViewCell
-            if (indexPath.row == 2) {
-                DatePickerTableViewCell.animate(withDuration: 0, delay: 0, options: <#T##UIView.AnimationOptions#>, animations: nil) { <#Bool#> in
-                    
-                }
             return tableViewCell
-            
         case .pickCycle(let value):
             break
         case .pickDuration(let value):
@@ -108,6 +106,81 @@ extension SubscriptionEditTableViewController {
         }
         return UITableViewCell()
     }
+    
+    func textViewAnswerChanged(cell: Cell, updatedAnswer: String?) {
+        var cells = self.state.cells
+        for index in 0..<cells.count {
+            var tempCell = cells[index]
+            guard tempCell.variable == cell.variable else { continue }
+            
+            switch cell.type {
+            case .textEdit:
+                tempCell.type = .textEdit(value: updatedAnswer)
+                cells[index] = tempCell
+            default:
+                break
+            }
+        }
+        self.state = State(cells: cells)
+    }
+    
+}
+
+extension SubscriptionEditTableViewController {
+    var subscription: Subscription? {
+        get {
+            getSubscriptionFromState()
+        }
+        set {
+            setStateFromSubscription(subscription: newValue)
+        }
+    }
+}
+
+private extension SubscriptionEditTableViewController {
+    
+    func setStateFromSubscription(subscription: Subscription?) {
+        var cells = [Cell]()
+        cells.append(Cell(title: "Name", placeHolder: "Enter Name", type: .textEdit(value: subscription?.name), variable: .name))
+        cells.append(Cell(title: "Description", placeHolder: "Enter A Description", type: .textEdit(value: subscription?.description), variable: .description))
+        cells.append(Cell(title: "Date", type: .pickDate(value: subscription?.firstBillDate), variable: .firstBillDate))
+        self.state = State(cells: cells)
+    }
+    
+    func getSubscriptionFromState() -> Subscription? {
+        var name: String?
+        var description: String?
+        var firstBillDate: Date?
+        
+        let cells = self.state.cells
+        
+        for item in cells {
+            switch (item.variable, item.type)  {
+            case (.name, .textEdit(value: let value)):
+                name = value
+            case (.description, .textEdit(value: let value)):
+                description = value
+            case (.firstBillDate, .pickDate(value: let value)):
+                firstBillDate = value
+            default:
+                break
+            }
+        }
+        
+        guard let name = name else { return nil }
+        
+        let subscription = Subscription(name: name,
+                                        description: description,
+                                        cost: nil,
+                                        iconName: Subscription.NetflixIcon,
+                                        firstBill: firstBillDate?.timeIntervalSince1970,
+                                        cycle: nil,
+                                        duration: nil,
+                                        remindMe: nil,
+                                        currency: nil)
+        return subscription
+    }
+    
     
 }
 
@@ -117,6 +190,3 @@ extension SubscriptionEditTableViewController: InstantiableFromStoryboard {
     static var storyBoardIdentifier: String = "SubscriptionEditTableViewController"
     
 }
-    
-    
-
